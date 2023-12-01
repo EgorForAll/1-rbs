@@ -1,0 +1,333 @@
+.catalog-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 45px;
+  @media (max-width: $lg) {
+    column-gap: 25px;
+    grid-template-columns: 250px 1fr;
+  }
+  @media (max-width: $md) {
+    display: flex;
+    margin: 0 20px;
+  }
+}
+
+.catalog__header {
+  display: flex;
+}
+
+.catalog__tabs {
+  display: flex;
+  width: 90%;
+  margin-bottom: 30px;
+  align-items: flex-end;
+  @media (max-width: $md) {
+    display: none;
+  }
+
+  @media (max-width: $lg) {
+    width: 100%;
+  }
+}
+
+.catalog__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+  @media (max-width: $lg) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.catalog__card {
+  width: 100%;
+  height: 400px;
+  @media (max-width: $lg) {
+    height: 470px;
+  }
+}
+
+.catalog__header-btn {
+  color: #000;
+  width: 100%;
+  font-family: $font-family;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 16px;
+  background-color: transparent;
+  padding-bottom: 13px;
+  border: none;
+  border-bottom: 3px solid rgba(255, 110, 46, 0.19);
+  @include transition(border-bottom, 0.2s);
+  @media (max-width: $lg) {
+    font-size: 18px;
+  }
+}
+
+.active-tab {
+  border-bottom: 3px solid $btn-color;
+}
+
+.colored {
+  color: $btn-color;
+}
+
+.card__intro {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.card__have {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #393186;
+  font-family: $font-family;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18.5px;
+}
+
+.card__buy {
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  opacity: 1;
+  animation: opacity-out 0.3s forwards;
+
+  &--disposed {
+    display: none;
+  }
+
+  &--hovered {
+    display: flex;
+    opacity: 0;
+    animation: opacity-in 0.3s forwards;
+  }
+}
+
+.card__type {
+  color: #464646;
+  font-family: $font-family;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18.5px;
+  margin-top: 20px;
+}
+
+.card__name {
+  margin-top: 5px;
+  color: #000;
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 18.5px;
+  @media (max-width: $lg) {
+    font-size: 18px;
+  }
+}
+
+.card__price {
+  display: block;
+  color: $btn-color;
+  margin-top: 25px;
+  font-family: $font-family;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 16px;
+  @media (max-width: $lg) {
+    font-size: 24px;
+  }
+}
+
+.card__form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-range::-webkit-outer-spin-button,
+.basket-range::-webkit-inner-spin-button {
+  display: none;
+}
+
+.basket-range {
+  display: block;
+  height: 32px;
+  width: 30px;
+  line-height: 32px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+.number__tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__number-btn {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  @include transition(background-color, 0.3s);
+
+  &:hover {
+    background-color: $btn-color-hov;
+  }
+}
+
+.card__bag {
+  background-color: $btn-color;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  @include transition(background-color, 0.3s);
+
+  &:hover {
+    background-color: $btn-color-hov;
+  }
+}
+
+.mns-btn {
+  margin-right: 5px;
+}
+
+.pls-btn {
+  margin-left: 5px;
+}
+
+.basket-range {
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.svg-like {
+  width: 34px;
+  height: 34px;
+}
+
+.card__favourite {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include transition(background-color, 0.3s);
+  animation: opacity-out 0.3s forwards;
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+
+  &--disposed {
+    display: none;
+  }
+
+  &--hovered {
+    display: flex;
+    opacity: 0;
+    animation: opacity-in 0.3s forwards;
+  }
+}
+
+.category-mobile {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  margin-bottom: 30px;
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+
+.drop-btn-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+  color: #000;
+  border: none;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  &:focus {
+    background-color: #fff;
+    color: #000;
+  }
+
+  &:active {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.dropdown-menu {
+  background-color: #f4f4f4 !important;
+}
+
+.drop-link {
+  color: #727272;
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50.5px;
+}
+
+.btn-check:checked + .btn,
+:not(.btn-check) + .btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+  color: #000;
+  background-color: #fff;
+  border-color: none;
+}
+
+.dropdown-item {
+  background-color: #f4f4f4;
+  color: #727272;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #000;
+  background-color: #f4f4f4;
+}

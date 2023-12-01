@@ -1,0 +1,226 @@
+.sidebar {
+  padding: 50px 30px;
+  background-color: #f4f4f4;
+
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.sidebar__filter-btn {
+  width: 53px;
+  height: 53px;
+  background-color: #393186;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $lg) {
+    display: none;
+  }
+}
+
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar__title {
+  color: #000;
+  font-family: Evolventa;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  @media (max-width: $lg) {
+    font-size: 24px;
+  }
+}
+
+.accordion-button::before {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-right: 20px;
+  content: '';
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  -webkit-transition: var(--bs-accordion-btn-icon-transition);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-body {
+  background-color: #f4f4f4;
+}
+
+.accordion-button {
+  background-color: #f4f4f4 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  border: none;
+}
+
+.btn-number {
+  margin-left: auto;
+}
+
+.sidebar__price-title {
+  color: #000;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-bottom: 20px;
+}
+
+::selection {
+  color: #fff;
+  background: #17a2b8;
+}
+.peice-wrapper {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 25px 40px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+header h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+header p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+.price-input {
+  width: 100%;
+  display: flex;
+  margin: 15px 0;
+}
+.price-input .field {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+}
+.field input {
+  width: 50px;
+  height: 30px;
+  outline: none;
+  font-size: 19px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  appearance: textfield;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.price-input .separator {
+  width: 130px;
+  display: flex;
+  font-size: 19px;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  height: 5px;
+  position: relative;
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+.slider .progress {
+  height: 100%;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #bdbdbd;
+}
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  appearance: none;
+  appearance: none;
+}
+.range-price::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #000;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+.range-price::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: #000;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.price__buttons {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $lg) {
+    flex-direction: column;
+  }
+}
+
+.price__submit-btn {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background-color: $btn-color;
+  color: #fff;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  border: none;
+  border-radius: 10px;
+  @include transition(background-color, 0.3s);
+
+  &:hover {
+    background-color: $btn-color-hov;
+  }
+  @media (max-width: $lg) {
+    margin-bottom: 10px;
+  }
+}
+
+.price__reset-btn {
+  height: 100%;
+  @extend .price__submit-btn;
+  background-color: #fff;
+  color: #000;
+  font-weight: 400;
+
+  &:hover {
+    background-color: #bdbdbd;
+  }
+}

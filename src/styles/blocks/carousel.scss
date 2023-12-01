@@ -1,0 +1,45 @@
+.gallery {
+  background: #fff;
+  margin-bottom: 80px;
+}
+
+.gallery-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 226px;
+  height: 226px;
+  margin-right: 20px;
+  background: #f4f4f4;
+  counter-increment: gallery-cell;
+}
+
+.flickity-page-dots {
+  display: none;
+}
+
+.product-title {
+  display: block;
+  font-family: $font-family;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  width: 100%;
+}
+
+.flickity-button-icon {
+  fill: $btn-color;
+}
+
+.flickity-button {
+  background: none;
+  &:hover {
+    background: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}

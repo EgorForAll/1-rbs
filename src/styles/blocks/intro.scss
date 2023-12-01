@@ -1,0 +1,19 @@
+.intro {
+  display: flex;
+  justify-content: center;
+}
+.intro__img {
+  @media (min-width: $xs) {
+    margin-top: 20;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $md) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $lg) {
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+}

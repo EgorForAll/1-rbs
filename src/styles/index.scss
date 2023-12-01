@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Evolventa';
+  font-weight: 400;
+  src: url('../fonts/Evolventa-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Evolventa';
+  font-weight: 700;
+  src: url('../fonts/Evolventa-Bold.ttf');
+}
+@import 'bootstrap/scss/bootstrap';
+@import 'variables';
+@import 'scaffolding';
+@import 'mixins';
+@import './blocks/keyframes.scss';
+@import './blocks/header.scss';
+@import './blocks/search.scss';
+@import './blocks/intro.scss';
+@import './blocks/carousel.scss';
+@import './blocks/sidebar.scss';
+@import './blocks/catalog.scss';
