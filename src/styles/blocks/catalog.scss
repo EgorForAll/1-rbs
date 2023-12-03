@@ -43,7 +43,7 @@
 
 .catalog__card {
   width: 100%;
-  height: 400px;
+  height: auto;
   @media (max-width: $lg) {
     height: 470px;
   }
@@ -142,6 +142,7 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 16px;
+  margin-bottom: 10px;
   @media (max-width: $lg) {
     font-size: 24px;
   }
@@ -190,6 +191,14 @@
   &:hover {
     background-color: $btn-color-hov;
   }
+
+  @media (max-width: $md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .card__bag {
@@ -206,14 +215,24 @@
   &:hover {
     background-color: $btn-color-hov;
   }
+
+  @media (max-width: $md) {
+    font-size: 11px;
+  }
 }
 
 .mns-btn {
   margin-right: 5px;
+  @media (max-width: $md) {
+    margin-right: 0;
+  }
 }
 
 .pls-btn {
   margin-left: 5px;
+  @media (max-width: $md) {
+    margin-left: 0;
+  }
 }
 
 .basket-range {
@@ -293,12 +312,12 @@
   }
 
   &:active {
-    background-color: #fff;
-    color: #000;
+    background-color: #fff !important;
+    color: #000 !important;
   }
 }
 
-.dropdown-menu {
+.dropdown-menu-catalog {
   background-color: #f4f4f4 !important;
 }
 
@@ -309,16 +328,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 50.5px;
-}
-
-.btn-check:checked + .btn,
-:not(.btn-check) + .btn:active,
-.btn:first-child:active,
-.btn.active,
-.btn.show {
-  color: #000;
-  background-color: #fff;
-  border-color: none;
 }
 
 .dropdown-item {

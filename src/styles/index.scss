@@ -9,6 +9,19 @@
   font-weight: 700;
   src: url('../fonts/Evolventa-Bold.ttf');
 }
+
+@font-face {
+  font-family: 'Helvetica';
+  font-weight: 400;
+  src: url('../fonts/Helvetica.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 500;
+  src: url('../fonts/Helvetica.ttf');
+}
+
 @import 'bootstrap/scss/bootstrap';
 @import 'variables';
 @import 'scaffolding';
@@ -20,3 +33,5 @@
 @import './blocks/carousel.scss';
 @import './blocks/sidebar.scss';
 @import './blocks/catalog.scss';
+@import './blocks/pagination.scss';
+@import './blocks/footer.scss';

@@ -1,0 +1,251 @@
+.footer__categories {
+  @media (min-width: $md) {
+    transform: translateX(40px);
+  }
+
+  @media (max-width: $md) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__account {
+  @media (max-width: $md) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__logo-wrapper {
+  @media (max-width: $md) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+}
+
+.footer {
+  background-color: #eaeaea;
+}
+
+.row__footer {
+  align-items: start;
+  @media (max-width: $md) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.footer__title {
+  color: #000;
+  font-family: $font-family;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  margin-bottom: 15px;
+  @media (max-width: $lg) {
+    font-size: 16px;
+  }
+}
+
+.categories__list {
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.account__list {
+  @extend .categories__list;
+}
+
+.footer__link {
+  color: #000;
+  font-family: $font-family;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+  }
+}
+
+.contacts__title {
+  color: #393186;
+  font-family: $font-family;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 25px;
+  @media (max-width: $lg) {
+    margin-bottom: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+  }
+}
+
+.contacts__item {
+  @extend .contacts__title;
+  margin-bottom: 15px;
+
+  @media (max-width: $lg) {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+.footer__rights {
+  color: #000;
+  font-family: $font-family;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+
+  @media (max-width: $lg) {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $md) {
+    font-size: 9px;
+  }
+
+  .colored {
+    display: block;
+  }
+}
+
+.footer__svg {
+  width: 222px;
+  height: 50px;
+  margin-left: 10px;
+  @media (max-width: $lg) {
+    width: 182px;
+    height: 30px;
+  }
+
+  @media (max-width: $md) {
+    width: 142px;
+    height: 20px;
+    margin-left: 0;
+  }
+}
+
+.footer__dev {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110px;
+  font-size: 16px;
+  font-family: $helvetica;
+  @media (max-width: $lg) {
+    min-height: 80px;
+  }
+
+  @media (max-width: $md) {
+    min-height: 50px;
+    font-size: 10px;
+  }
+}
+
+.footer__dropdown-btn {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: none !important;
+
+  &:active {
+    background-color: #eaeaea !important;
+    border: none !important;
+  }
+  &:focus {
+    background-color: #eaeaea !important;
+    border: none !important;
+  }
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  vertical-align: 0.255em;
+  width: 16px;
+  height: 16px;
+  content: '';
+  border: none;
+  background-image: url('~assets/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+
+.dropdown-menu-custom-footer {
+  background-color: #fff;
+  width: 100%;
+}
+
+.dropdown-item-custom-footer {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+}
+
+.nav__svg {
+  width: 26px;
+  height: 26px;
+  margin-bottom: 5px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav__link-title {
+  font-family: $poppins;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+}
+
+.row__nav-footer {
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+
+.bag__number {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -3px;
+  right: 14px;
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 50%;
+}
